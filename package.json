@@ -1,0 +1,19 @@
+{
+  "name": "stock-app",
+  "version": "1.0.0",
+  "description": "Desktop app for live stock data using Paytm Money APIs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . stock-app --platform=all --arch=x64 --out=dist"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "chart.js": "^4.4.3",
+    "chartjs-chart-financial": "^0.2.1",
+    "electron": "^31.3.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^17.1.2"
+  }
+}

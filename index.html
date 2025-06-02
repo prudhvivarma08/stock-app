@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Data App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Data Viewer</h1>
+    <input type="text" id="stockSymbol" placeholder="Enter stock symbol (e.g., INFY)">
+    <button onclick="fetchData()">Search</button>
+    <div>
+      <button onclick="setTimeRange('1D')">Daily</button>
+      <button onclick="setTimeRange('1W')">Weekly</button>
+      <button onclick="setTimeRange('1M')">Monthly</button>
+      <button onclick="setTimeRange('1Y')">Yearly</button>
+      <button onclick="setTimeRange('5Y')">5-Year</button>
+      <button onclick="setTimeRange('MAX')">All Time</button>
+    </div>
+    <div id="metrics">
+      <p>Open: <span id="open"></span></p>
+      <p>High: <span id="high"></span></p>
+      <p>Low: <span id="low"></span></p>
+      <p>Close: <span id="close"></span></p>
+      <p>Volume: <span id="volume"></span></p>
+    </div>
+    <canvas id="stockChart"></canvas>
+  </div>
+  <script src="chart.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
